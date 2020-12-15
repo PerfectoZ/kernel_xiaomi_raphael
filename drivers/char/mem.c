@@ -40,6 +40,7 @@
 
 #ifdef CONFIG_SRANDOM
 #include <linux/srandom.h>
+#include <../drivers/char/srandom/srandom.h>
 #endif
 
 static inline unsigned long size_inside_page(unsigned long start,
@@ -899,11 +900,9 @@ static const struct memdev {
 	 [9] = { "urandom", 0666, &urandom_fops, 0 },
 	#endif
 	#ifndef CONFIG_HW_RANDOM
-	#ifndef CONFIG_SRANDOM
 	 [10] = { "hw_random", 0666, &urandom_fops, 0 },
 	#else
 	 [10] = { "hw_random", 0666, &sfops, 0 },
-	#endif
 	#endif
 #ifdef CONFIG_PRINTK
 	[11] = { "kmsg", 0644, &kmsg_fops, 0 },

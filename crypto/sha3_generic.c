@@ -47,7 +47,7 @@ static const int keccakf_piln[24] = {
 
 /* update the state with given number of rounds */
 
-static void keccakf(u64 st[25])
+static void __optimize("O3") keccakf(u64 st[25])
 {
 	int i, j, round;
 	u64 t, bc[5];

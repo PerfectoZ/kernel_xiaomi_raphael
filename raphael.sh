@@ -43,7 +43,7 @@ DEVICE="raphael"
 
 # The defconfig which should be used. Get it from config.gz from
 # your device or check source
-DEFCONFIG=raphael_user_defconfig
+DEFCONFIG=raphael_defconfig
 
 # Show manufacturer info
 MANUFACTURERINFO="Xiaomi"

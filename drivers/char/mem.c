@@ -39,7 +39,6 @@
 #define DEVPORT_MINOR	4
 
 #ifdef CONFIG_SRANDOM
-#include <linux/srandom.h>
 #include <../drivers/char/srandom/srandom.h>
 #endif
 
